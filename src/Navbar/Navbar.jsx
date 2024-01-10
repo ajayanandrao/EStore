@@ -60,10 +60,28 @@ const Navbar = () => {
         .slice()
         .sort((a, b) => (a.date && b.date ? a.date.localeCompare(b.date) : 0))
         .reverse();
-
+    const [pay, setPay] = useState(false);
 
     return (
         <div className='navbar-main'>
+
+            {pay &&
+                <div className="payment-div">
+                    <div className="payment-div-card">
+                        <h4 className='mb-5'>Ajay Anandrao</h4>
+
+                        <div className='address'>
+                            <div className="top-bar"> Delivery Address</div>
+                            <div className="address-div">
+                                Shilp nagar, Aurangabad 439281 <span className='edit-add'>Edit</span>
+                            </div>
+                        </div>
+                        <div className='ms-2 mt-2' style={{ color: "blue", fontWeight: "600" }}>Change</div>
+                        <button className='btn btn-success mt-4'>Order Here</button>
+                        <button className='btn btn-outline-primary ms-3 mt-4' onClick={() => setPay(false)}>Cancle</button>
+                    </div>
+                </div>
+            }
 
             {close &&
                 <motion.div
@@ -171,7 +189,7 @@ const Navbar = () => {
                                 (
                                     <>
                                         <h4>Total: <FaIndianRupeeSign style={{ fontSize: "22px" }} />{total}</h4>
-                                        <div className='buy-btn mt-1'>Buy Now</div>
+                                        <div className='buy-btn mt-1' onClick={() => setPay(true)}>Buy Now</div>
                                     </>
                                 )
                             }
