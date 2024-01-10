@@ -1,0 +1,202 @@
+@import "./../Styles/Mixin_New.scss";
+
+.product-main {
+    width: 100%;
+    color: #151515;
+    display: flex;
+    padding: 1rem;
+    position: relative;
+
+    .payment-div {
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        color: #FAFAFA;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .payment-div-card {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            background: #FAFAFA;
+            border-radius: 5px;
+            padding: 1rem;
+            color: #181818;
+
+            .address {
+                width: 100%;
+                height: 150px;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+                .top-bar {
+                    width: 100%;
+                    height: 40px;
+                    background-color: #0025c9;
+                    font-size: 18px;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 1rem;
+                    color: white;
+                }
+
+                .address-div {
+                    padding: 0.5rem;
+                    display: flex;
+                    align-items: center;
+
+                    .edit-add {
+                        flex: 1;
+                        display: flex;
+                        justify-content: end;
+                        color: #0025c9;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    @include respond-to(md) {
+        display: block;
+    }
+
+    @include respond-to(sm) {
+        display: block;
+    }
+
+    @include respond-to(xs) {
+        display: block;
+    }
+
+    .product-image-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 1rem;
+
+        .product-image-wrapper {
+            margin-bottom: 1rem;
+            width: 400px;
+            height: 450px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+            @include respond-to(sm) {
+                width: 350px;
+                height: 400px;
+            }
+
+            @include respond-to(xs) {
+                width: 300px;
+                height: 350px;
+            }
+
+            .product-image {
+                width: 400px;
+                height: 400px;
+                object-fit: contain;
+                object-position: center;
+
+                @include respond-to(sm) {
+                    width: 350px;
+                    height: 350px;
+                }
+
+                @include respond-to(xs) {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+        }
+
+        .product-screenshot {
+            width: 100%;
+            max-width: 55px;
+            height: 55px;
+            margin: 1rem;
+            object-fit: contain;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            padding: 5px;
+        }
+    }
+
+
+    .product-detail-div {
+        flex: 1;
+        padding: 1rem;
+        padding-left: 50px;
+
+        @include respond-to(xs) {
+            padding: 1rem;
+        }
+
+        .product-title {
+            text-transform: capitalize;
+            font-weight: 700;
+        }
+
+        .product-price-div {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 28px;
+        }
+
+        .add-to-cart {
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            color: #181818;
+
+        }
+
+        .product-option-div {
+            display: flex;
+            margin: 30px 0;
+            color: #181818;
+
+            .star {
+                color: gold;
+                font-size: 32px;
+                margin: 0 3px;
+            }
+
+            .product-option-item {
+                color: gray;
+                width: 130px;
+            }
+
+            .delevery-input {
+                border: none;
+                border-bottom: 2px solid #999;
+                outline: none;
+                background: none;
+                margin: 0 15px;
+
+                @include respond-to(xs) {
+                    margin: 0 10px;
+                }
+            }
+        }
+
+
+    }
+
+
+}

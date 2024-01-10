@@ -1,0 +1,102 @@
+[
+    {
+        "id": 11,
+        "name": "SAMSUNG Galaxy F54 5G (Meteor Blue, 256 GB)  (8 GB RAM)",
+        "price": 24999,
+        "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/y/2/b/galaxy-f54-5g-sm-e546bdbhins-samsung-original-imagq79fjhhcb6u2.jpeg?q=70",
+        "s1": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/c/8/m/galaxy-f54-5g-sm-e546bdbhins-samsung-original-imagq79fhpy8tugw.jpeg?q=70",
+        "s2": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/w/b/8/galaxy-f54-5g-sm-e546bdbhins-samsung-original-imagq79fjdgmp3tg.jpeg?q=70",
+        "s3": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/t/q/b/galaxy-f54-5g-sm-e546bdbhins-samsung-original-imagq79fqebdgzxj.jpeg?q=70",
+        "s4": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/v/l/o/galaxy-f54-5g-sm-e546bdbhins-samsung-original-imagq79fjgvtzgbh.jpeg?q=70"
+    },
+    {
+        "id": 12,
+        "name": " vivo T2 Pro 5G (Dune Gold, 256 GB)  (8 GB RAM)",
+        "price": 24999,
+        "image": " https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/5/y/8/-original-imagtt4mhqrzjs9r.jpeg?q=70",
+        "s1": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/p/4/t/t2-pro-5g-v2321-vivo-original-imagtknhdfegg2dm.jpeg?q=70",
+        "s2": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/w/4/o/t2-pro-5g-v2321-vivo-original-imagtknhfw4adusm.jpeg?q=70",
+        "s3": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/g/c/8/t2-pro-5g-v2321-vivo-original-imagtknhmkbxaafw.jpeg?q=70",
+        "s4": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/7/z/b/t2-pro-5g-v2321-vivo-original-imagtknhjgcgyags.jpeg?q=70"
+    },
+    {
+        "id": 13,
+        "name": " APPLE iPhone 14 (Blue, 128 GB)",
+        "price": 58999,
+        "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/3/5/l/-original-imaghx9qmgqsk9s4.jpeg?q=70 ",
+        "s1": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/5/w/3/-original-imaghxcpnf8aay8h.jpeg?q=70",
+        "s2": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/n/b/z/-original-imaghxcpwuhbghgh.jpeg?q=70",
+        "s3": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/1/d/y/-original-imaghxcpvtta2hzs.jpeg?q=70",
+        "s4": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/3/5/l/-original-imaghx9qmgqsk9s4.jpeg?q=70 "
+    },
+    {
+        "id": 14,
+        "name": " MOTOROLA g84 5G (Viva Magenta, 256 GB)  (12 GB RAM)",
+        "price": 18999,
+        "image": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/5/e/3/g84-5g-paym0018in-motorola-original-imagsy5zmhvkcfsx.jpeg?q=70",
+        "s1": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/m/j/r/g84-5g-paym0018in-motorola-original-imagsy5zwf9eghkc.jpeg?q=70",
+        "s2": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/r/1/l/g84-5g-paym0018in-motorola-original-imagsy5zx2uzevnk.jpeg?q=70",
+        "s3": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/b/f/3/g84-5g-paym0018in-motorola-original-imagsy5zxzg6g3nr.jpeg?q=70",
+        "s4": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/6/g/5/g84-5g-paym0018in-motorola-original-imagsy5zjzj63gw8.jpeg?q=70"
+    },
+    {
+        "id": 15,
+        "name": "Infinix Zero 30 5G (Rome Green, 256 GB)  (12 GB RAM)",
+        "price": 23999,
+        "image": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/w/x/0/-original-imagszg3qxqgdx9c.jpeg?q=70",
+        "s1": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/k/d/m/-original-imagszg3zmt5ungh.jpeg?q=70",
+        "s2": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/x/l/v/-original-imagszg34azybw4z.jpeg?q=70",
+        "s3": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/w/s/t/-original-imagszg34wwg6hwh.jpeg?q=70",
+        "s4": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/s/s/x/-original-imagszg3pxzsjryd.jpeg?q=70"
+    },
+    {
+        "id": 16,
+        "name": " OPPO F21 Pro (Sunset Orange, 128 GB)  (8 GB RAM)",
+        "price": 18360,
+        "image": " https://rukminim2.flixcart.com/image/416/416/l1zc6fk0/mobile/u/7/w/f21-pro-cph2363-oppo-original-imagdf4jphscz9jz.jpeg?q=70",
+        "s1": " https://rukminim2.flixcart.com/image/416/416/l1zc6fk0/mobile/u/7/w/f21-pro-cph2363-oppo-original-imagdf4jphscz9jz.jpeg?q=70",
+        "s2": " https://rukminim2.flixcart.com/image/416/416/l1xwqkw0/mobile/i/k/z/f21-pro-cph2363-oppo-original-imagdecuqxfn5z4h.jpeg?q=70",
+        "s3": " https://rukminim2.flixcart.com/image/416/416/l1zc6fk0/mobile/u/7/w/f21-pro-cph2363-oppo-original-imagdf4jphscz9jz.jpeg?q=70",
+        "s4": "https://rukminim2.flixcart.com/image/416/416/l1xwqkw0/mobile/i/k/z/f21-pro-cph2363-oppo-original-imagdecuqxfn5z4h.jpeg?q=70"
+    },
+    {
+        "id": 17,
+        "name": "Google Pixel 8 (Rose, 128 GB)  (8 GB RAM) ",
+        "price": 75999,
+        "image": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/r/s/6/-original-imagtwh4bzret3a8.jpeg?q=70",
+        "s1": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/c/t/c/-original-imagtwh4b5qppjzz.jpeg?q=70",
+        "s2": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/0/l/9/-original-imagtwh4jgj4rhdp.jpeg?q=70",
+        "s3": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/l/p/i/-original-imagtwh4hzmzmf9q.jpeg?q=70",
+        "s4": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/r/s/6/-original-imagtwh4bzret3a8.jpeg?q=70"
+    },
+    {
+        "id": 18,
+        "name": " POCO M6 5G (Orion Blue, 128 GB)  (6 GB RAM)",
+        "price": 11499,
+        "image": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/v/9/a/m6-5g-mzb0g4hin-poco-original-imagwes4x2bh29ek.jpeg?q=70",
+        "s1": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/a/j/l/m6-5g-mzb0g4hin-poco-original-imagwes4tbyuwdvz.jpeg?q=70",
+        "s2": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/t/g/q/m6-5g-mzb0g4hin-poco-original-imagwes4u9c8rhww.jpeg?q=70",
+        "s3": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/j/g/e/m6-5g-mzb0g4hin-poco-original-imagwes4ejfypsqq.jpeg?q=70",
+        "s4": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/g/m/d/m6-5g-mzb0g4hin-poco-original-imagwes4q3cqegna.jpeg?q=70"
+    },
+    {
+        "id": 19,
+        "name": " REDMI 12 (Pastel Blue, 128 GB)  (6 GB RAM)",
+        "price": 10499,
+        "image": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/e/a/g/-original-imags37h4prxjazz.jpeg?q=70",
+        "s1": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/b/s/h/12-mzb0eywin-redmi-original-imagrwgc3zbbyyzg.jpeg?q=70",
+        "s2": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/m/b/a/12-mzb0eywin-redmi-original-imagrwgc4knzycqn.jpeg?q=70",
+        "s3": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/m/c/g/12-mzb0eywin-redmi-original-imagrwgcdmyntjzh.jpeg?q=70",
+        "s4": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/6/4/k/12-mzb0eywin-redmi-original-imagrwgcgepzvkpd.jpeg?q=70"
+    },
+    {
+        "id": 20,
+        "name": " Infinix SMART 8 HD (Timber Black, 64 GB)  (3 GB RAM)",
+        "price": 16299,
+        "image": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/i/y/g/-original-imagwfffdrfjj2pg.jpeg?q=70",
+        "s1": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/4/v/v/-original-imagwfff8mbesnss.jpeg?q=70",
+        "s2": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/n/u/m/-original-imagwfff2ewh6gzg.jpeg?q=70",
+        "s3": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/z/r/4/-original-imagwffffpwqn75p.jpeg?q=70",
+        "s4": " https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/0/v/z/-original-imagwfffgerzxdw9.jpeg?q=70"
+    }
+]
