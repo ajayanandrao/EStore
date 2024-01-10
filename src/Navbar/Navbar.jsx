@@ -153,11 +153,11 @@ const Navbar = () => {
                                             <Time timestamp={item.time} />
                                         </div>
                                     </div>
+                                    <hr className='w-100' />
                                 </div>
                             )
 
                         })}
-                        <hr className='w-100' />
                         <div className='total'>
                             {total === 0 ? (<h4 style={{ textAlign: "center" }}>Missing Cart items?</h4>)
                                 :
