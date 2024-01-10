@@ -13,7 +13,7 @@ import { FaSquareMinus } from "react-icons/fa6";
 import { FaSquarePlus } from "react-icons/fa6";
 import { remove, updateTodo } from '../Redux/Product';
 import Time from '../Time';
-
+import FlipMove from 'react-flip-move';
 
 const Navbar = () => {
 
@@ -76,8 +76,10 @@ const Navbar = () => {
                     {navigateTab === "Login" ?
                         <div className="login-wrapper">
                             <h2 className='text-center mb-5' >E-Store</h2>
-                            <input type="text" placeholder='Email' className='login-input' />
-                            <input type="text" placeholder='Password' className='login-input my-4' />
+                            <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="Enter email" className='login-input form-control' />
+                            <input type="password" id="exampleInputPassword1" placeholder="Password"
+                                className='login-input form-control  my-4' />
 
                             <button className='btn btn-primary'>Login</button>
                             <span className='my-4' > forgot password</span>
@@ -90,11 +92,13 @@ const Navbar = () => {
 
                         <div className="login-wrapper">
                             <h2 className='text-center mb-5' >E-Store</h2>
-                            <input type="text" placeholder='Email' className='login-input' />
-                            <input type="text" placeholder='Mobile' className='login-input my-4' />
-                            <input type="text" placeholder='Password' className='login-input mb-4' />
+                            <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="Enter email" className='login-input form-control' />
+                            <input type="text" placeholder='Mobile' className='login-input form-control my-4' />
+                            <input type="password" id="exampleInputPassword1" placeholder="Password"
+                                className='login-input form-control mb-4' />
 
-                            <button className='btn  btn-success'>SignUp</button>
+                            <button className='btn btn-success'>SignUp</button>
                             <span className='my-4' >
                                 <button className='btn w-100'>
                                     <FcGoogle style={{ fontSize: "24px" }} /> Google</button>
@@ -115,49 +119,121 @@ const Navbar = () => {
                     animate={{ x: 0 }}
                     className="Cart-div">
                     <IoClose className='closeDiv' onClick={() => setCartView(false)} />
+                    <div className="Cart-wrapper">
+
+                        <FlipMove>
+                            {orderedTodo.map((item) => {
+                                return (
+                                    <div >
+                                        <div className="cart-container">
+                                            <IoClose className='cart-delete' onClick={() => Delete(item.id)} />
+
+                                            <img src={item.image} className='cart-image me-2' alt="" />
+                                            <div>
+                                                <div className='cart-name'>
+                                                    {item.name.slice(0, 15)}...
+                                                </div>
+                                                <div className='mt-2'>
+                                                    {item.count < 2 ?
+                                                        < FaSquareMinus className='operator opacity' />
+                                                        :
+                                                        <FaSquareMinus className='operator' onClick={() => Min(item.id, item.count)} />
+                                                    }
+
+                                                    <span style={{ fontSize: "18px", fontWeight: "600" }} className='mx-3'>
+                                                        {item.count}
+                                                    </span>
+                                                    <FaSquarePlus className='operator' onClick={() => Add(item.id, item.count)} />
+                                                </div>
+                                            </div>
+
+                                            <h4 className='cart-price'>
+                                                <FaIndianRupeeSign style={{ fontSize: "21px" }} />
+                                                <span className='cart-pri'>
+                                                    {item.price}
+                                                </span>
+                                            </h4>
+
+                                            <div className="time">
+                                                <Time timestamp={item.time} />
+                                            </div>
+                                        </div>
+                                        <hr className='w-100' />
+                                    </div>
+                                )
+
+                            })}
+                        </FlipMove>
+
+                        <div className='total'>
+                            {total === 0 ? (<h4 style={{ textAlign: "center" }}>Missing Cart items?</h4>)
+                                :
+                                (
+                                    <>
+                                        <h4>Total: <FaIndianRupeeSign style={{ fontSize: "22px" }} />{total}</h4>
+                                        <div className='buy-btn mt-1'>Buy Now</div>
+                                    </>
+                                )
+                            }
+                        </div>
+                    </div>
+
+                </motion.div>
+            }
+
+            {/* {cartView &&
+                <motion.div
+                    initial={{ x: 100 }}
+                    transition={{ duration: 0.5 }}
+                    animate={{ x: 0 }}
+                    className="Cart-div">
+                    <IoClose className='closeDiv' onClick={() => setCartView(false)} />
 
                     <div className="Cart-wrapper">
-                        {orderedTodo.map((item) => {
-                            return (
-                                <div >
-                                    <div className="cart-container">
-                                        <IoClose className='cart-delete' onClick={() => Delete(item.id)} />
 
-                                        <img src={item.image} className='cart-image me-2' alt="" />
-                                        <div>
-                                            <div className='cart-name'>
-                                                {item.name.slice(0, 15)}...
+                        <FlipMove>
+                            {orderedTodo.map((item) => {
+                                return (
+                                    <div >
+                                        <div className="cart-container">
+                                            <IoClose className='cart-delete' onClick={() => Delete(item.id)} />
+
+                                            <img src={item.image} className='cart-image me-2' alt="" />
+                                            <div>
+                                                <div className='cart-name'>
+                                                    {item.name.slice(0, 15)}...
+                                                </div>
+                                                <div className='mt-2'>
+                                                    {item.count < 2 ?
+                                                        < FaSquareMinus className='operator opacity' />
+                                                        :
+                                                        <FaSquareMinus className='operator' onClick={() => Min(item.id, item.count)} />
+                                                    }
+
+                                                    <span style={{ fontSize: "18px", fontWeight: "600" }} className='mx-3'>
+                                                        {item.count}
+                                                    </span>
+                                                    <FaSquarePlus className='operator' onClick={() => Add(item.id, item.count)} />
+                                                </div>
                                             </div>
-                                            <div className='mt-2'>
-                                                {item.count < 2 ?
-                                                    < FaSquareMinus className='operator opacity' />
-                                                    :
-                                                    <FaSquareMinus className='operator' onClick={() => Min(item.id, item.count)} />
-                                                }
 
-                                                <span style={{ fontSize: "18px", fontWeight: "600" }} className='mx-3'>
-                                                    {item.count}
+                                            <h4 className='cart-price'>
+                                                <FaIndianRupeeSign style={{ fontSize: "21px" }} />
+                                                <span className='cart-pri'>
+                                                    {item.price}
                                                 </span>
-                                                <FaSquarePlus className='operator' onClick={() => Add(item.id, item.count)} />
+                                            </h4>
+
+                                            <div className="time">
+                                                <Time timestamp={item.time} />
                                             </div>
                                         </div>
-
-                                        <h4 className='cart-price'>
-                                            <FaIndianRupeeSign style={{ fontSize: "21px" }} />
-                                            <span className='cart-pri'>
-                                                {item.price}
-                                            </span>
-                                        </h4>
-
-                                        <div className="time">
-                                            <Time timestamp={item.time} />
-                                        </div>
+                                        <hr className='w-100' />
                                     </div>
-                                    <hr className='w-100' />
-                                </div>
-                            )
+                                )
 
-                        })}
+                            })}
+                        </FlipMove>
                         <div className='total'>
                             {total === 0 ? (<h4 style={{ textAlign: "center" }}>Missing Cart items?</h4>)
                                 :
@@ -172,7 +248,7 @@ const Navbar = () => {
                     </div>
 
                 </motion.div >
-            }
+            } */}
 
             <div className='nav-one'>
                 <div className='nav-title'>
@@ -184,11 +260,11 @@ const Navbar = () => {
                 <div className='nav-main-div'>
                     <input type="text" className='nav-top-input' placeholder='Search for Products' />
                     <span className='cart-div' >
-                        <div className="cart-count"  onClick={() => setCartView(true)}>
+                        <div className="cart-count" onClick={() => setCartView(true)}>
                             {arry.length}
                         </div>
-                        <FaCartShopping className='cart-icon me-2' onClick={() => setCartView(true)}/>
-                        <span className='cart-text' style={{ fontSize: "18px", fontWeight: "600" }}  onClick={() => setCartView(true)}>Cart</span>
+                        <FaCartShopping className='cart-icon me-2' onClick={() => setCartView(true)} />
+                        <span className='cart-text' style={{ fontSize: "18px", fontWeight: "600" }} onClick={() => setCartView(true)}>Cart</span>
                     </span>
                     <FaUserCircle className='cart' onClick={() => setClose(true)} />
                     <TiThMenuOutline className='nav-mainu' />

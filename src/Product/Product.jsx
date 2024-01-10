@@ -32,6 +32,8 @@ const Product = () => {
             .catch((error) => console.log(error))
     }, []);
 
+
+
     const Arrya = [...category, ...mobile, ...newApi];
 
     const categoryMatch = Arrya.find((item) => item.id == id);
@@ -46,13 +48,20 @@ const Product = () => {
         }
         return
     }
+    function myFunction() {
+        // Get the snackbar DIV
+        var x = document.getElementById("snackbar");
 
+        // Add the "show" class to DIV
+        x.className = "show";
 
+        // After 3 seconds, remove the show class from DIV
+        setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+    }
 
     return (
         <>
             <div className='product-main'>
-
                 {pay &&
                     <div className="payment-div">
                         <div className="payment-div-card">
@@ -66,10 +75,13 @@ const Product = () => {
                             </div>
                             <div className='ms-2 mt-2' style={{ color: "blue", fontWeight: "600" }}>Change</div>
                             <button className='btn btn-success mt-4'>Order Here</button>
-                            <button className='btn btn-outline-primary ms-3 mt-4'  onClick={() => setPay(false)}>Cancle</button>
+                            <button className='btn btn-outline-primary ms-3 mt-4' onClick={() => setPay(false)}>Cancle</button>
                         </div>
                     </div>
                 }
+
+                <div id="snackbar" >Product Added...</div>
+
                 <div className="product-image-div">
 
                     <div className='product-image-wrapper' >
@@ -92,7 +104,6 @@ const Product = () => {
                     </div>
                 </div>
 
-
                 <div className='product-detail-div'>
                     <div>
                         <h4 className='product-title'>
@@ -105,8 +116,10 @@ const Product = () => {
 
                         <div className='d-flex mt-3 align-items-center'>
                             <div className="add-to-cart" style={{ border: '1px solid #999' }}
-                                onClick={() => handleAdd(categoryMatch.id, categoryMatch.name,
-                                    categoryMatch.image, categoryMatch.price)}>
+                                onClick={() => {
+                                    handleAdd(categoryMatch.id, categoryMatch.name,
+                                        categoryMatch.image, categoryMatch.price); myFunction();
+                                }}>
 
                                 <FaCartShopping style={{ fontSize: "18px" }} className='me-2' />
                                 ADD TO CART

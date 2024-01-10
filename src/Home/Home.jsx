@@ -8,7 +8,6 @@ import { FaStar } from "react-icons/fa6";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
 import GroupCell from './GroupCell/GroupCell';
 import { Link } from 'react-router-dom';
-import Flickity from 'react-flickity-component';
 import OneCell from './OneCell/OneCell';
 import topCarsole from "./../list.json";
 
@@ -16,6 +15,7 @@ import micro from "./../assets/plane.png";
 import tv from "./../assets/tv.png";
 import microsoft from "./../assets/microsoft.png";
 import Footer from '../Footer';
+
 
 const Home = () => {
     const [newApi, setNewApi] = useState([]);
@@ -26,6 +26,14 @@ const Home = () => {
                 setNewApi(res.data);
             })
             .catch((error) => console.log(error))
+    }, []);
+
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(true);
+        }, 1200);
     }, []);
 
     const TopCarsole = topCarsole.map((item) => {
@@ -122,29 +130,44 @@ const Home = () => {
             )
         )
     });
-
-
-
+    const [childData, setChildData] = useState(null);
+    const handleChildData = (data) => {
+        setChildData(data);
+    };
     return (
         <>
             <div className='main-div '>
 
-
                 <OneCell propsData={TopCarsole} />
-
                 <div className="groupCell-wrapper">
-                    <h5 className='my-4 title' >Top Deals</h5>
-                    <GroupCell propsData={Category} />
+                    <h5 className='my-4 title'>Top Deals</h5>
+
+                    {!loading ? <div className=" placeholder-glow ">
+                        <div className='loading-div placeholder'></div>
+                    </div> :
+                        <GroupCell propsData={Category} />
+                    }
+
                 </div>
 
                 <div className="groupCell-wrapper">
                     <h5 className='my-4 title'>Mobiles</h5>
-                    <GroupCell propsData={Mobile} />
+                    {!loading ? <div className=" placeholder-glow ">
+                        <div className='loading-div placeholder'></div>
+                    </div> :
+                        <GroupCell propsData={Mobile} />
+                    }
+
                 </div>
 
                 <div className="groupCell-wrapper">
                     <h5 className='my-4 title'>Suggested for you</h5>
-                    <GroupCell propsData={Product} />
+                    {!loading ? <div className=" placeholder-glow ">
+                        <div className='loading-div placeholder'></div>
+                    </div> :
+                        <GroupCell propsData={Product} />
+                    }
+
                 </div>
 
             </div>
