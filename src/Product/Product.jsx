@@ -12,7 +12,8 @@ import { MdLocationOn } from "react-icons/md";
 import { useDispatch, useSelector } from 'react-redux';
 import { AddProduct, updateTodo } from '../Redux/Product';
 import Footer from '../Footer';
-
+import { FaSquarePlus } from "react-icons/fa6";
+import { FaSquareMinus } from "react-icons/fa6";
 
 const Product = () => {
     const { id } = useParams();
@@ -32,7 +33,27 @@ const Product = () => {
             .catch((error) => console.log(error))
     }, []);
 
+    const [number, setNumber] = useState(1);
 
+    const Add = (id, num) => {
+
+        if (id && number) {
+            setNumber((number) => number + 1)
+            console.log(number);
+            dispatch(updateTodo({ id, number }))
+        }
+
+    }
+
+    const Min = (id) => {
+        if (number < 2) {
+            return
+        }
+        if (id) {
+            setNumber((number) => number - 1)
+            dispatch(updateTodo({ id, number }))
+        }
+    }
 
     const Arrya = [...category, ...mobile, ...newApi];
 
@@ -42,9 +63,9 @@ const Product = () => {
         return <div className='product-main'></div>;
     }
 
-    const handleAdd = (id, name, image, price) => {
+    const handleAdd = (id, name, image, price, count) => {
         if (id && name && image && price) {
-            dispatch(AddProduct(id, name, image, price));
+            dispatch(AddProduct(id, name, image, price, count));
         }
         return
     }
@@ -114,20 +135,29 @@ const Product = () => {
                             <FaIndianRupeeSign />{categoryMatch.price}
                         </div>
 
-                        <div className='d-flex mt-3 align-items-center'>
+                        <div className='d-flex mt-3 add-btns align-items-center'>
                             <div className="add-to-cart" style={{ border: '1px solid #999' }}
                                 onClick={() => {
                                     handleAdd(categoryMatch.id, categoryMatch.name,
-                                        categoryMatch.image, categoryMatch.price); myFunction();
+                                        categoryMatch.image, categoryMatch.price, number); myFunction();
                                 }}>
 
                                 <FaCartShopping style={{ fontSize: "18px" }} className='me-2' />
                                 ADD TO CART
                             </div>
-                            <div className="add-to-cart ms-3"
-                                style={{ backgroundColor: "#DF013A", color: "white" }}
-                                onClick={() => setPay(true)}
-                            >BUY NOW</div>
+
+                            <div className='d-flex add-btn-sec align-items-center'>
+                                <div className='mx-4'>
+                                    <FaSquareMinus className='operator' onClick={() => Min(categoryMatch.id, categoryMatch.count)} />
+                                    <span className='mx-2'>{number}</span>
+                                    <FaSquarePlus className='operator' onClick={() => Add(categoryMatch.id, number)} />
+                                </div>
+
+                                <div className="add-to-cart "
+                                    style={{ backgroundColor: "#DF013A", color: "white" }}
+                                    onClick={() => setPay(true)}
+                                >BUY NOW</div>
+                            </div>
                         </div>
                     </div>
 

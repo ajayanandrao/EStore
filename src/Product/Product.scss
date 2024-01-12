@@ -141,6 +141,23 @@
         padding: 1rem;
         padding-left: 50px;
 
+        .operator {
+            font-size: 28px;
+            cursor: pointer;
+            color: #013ADF;
+        }
+
+        .add-btns {
+            display: flex;
+            
+            @include respond-to(xs) {
+                flex-direction: column;
+                .add-btn-sec{
+                    margin-top: 1rem;
+                }
+            }
+        }
+
         @include respond-to(xs) {
             padding: 1rem;
         }
@@ -163,7 +180,6 @@
             font-weight: 600;
             cursor: pointer;
             color: #181818;
-
         }
 
         .product-option-div {

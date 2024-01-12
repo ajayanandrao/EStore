@@ -10,12 +10,12 @@ const Product = createSlice({
             reducer(state, action) {
                 state.push(action.payload);
             },
-            prepare(id, name, image, price) {
+            prepare(id, name, image, price, count) {
                 return {
                     payload: {
                         id: nanoid(),
                         uid: id,
-                        count: 1,
+                        count: count,
                         name,
                         image,
                         price,
