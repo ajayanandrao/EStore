@@ -14,6 +14,7 @@ import { FaSquarePlus } from "react-icons/fa6";
 import { remove, updateTodo } from '../Redux/Product';
 import Time from '../Time';
 import FlipMove from 'react-flip-move';
+import { CartOff, CartOn } from '../Redux/CartView';
 
 const Navbar = () => {
 
@@ -61,6 +62,12 @@ const Navbar = () => {
         .sort((a, b) => (a.date && b.date ? a.date.localeCompare(b.date) : 0))
         .reverse();
     const [pay, setPay] = useState(false);
+
+    const handleCartTrue = () => {
+        dispatch(CartOn());
+    }
+
+    const select = useSelector((state) => state.catView.cartViews);
 
     return (
         <div className='navbar-main'>
@@ -130,13 +137,13 @@ const Navbar = () => {
                 </motion.div>
             }
 
-            {cartView &&
+            {select &&
                 <motion.div
                     initial={{ x: 100 }}
                     transition={{ duration: 0.5 }}
                     animate={{ x: 0 }}
                     className="Cart-div">
-                    <IoClose className='closeDiv' onClick={() => setCartView(false)} />
+                    <IoClose className='closeDiv' onClick={() => dispatch(CartOff())} />
                     <div className="Cart-wrapper">
 
                         <FlipMove>
@@ -269,7 +276,7 @@ const Navbar = () => {
             } */}
 
             <div className='nav-one'>
-                <div className='nav-title'>
+                <div className='nav-title' >
                     <Link className='link' to={"/"}>
                         E-Store
                     </Link>
@@ -278,11 +285,11 @@ const Navbar = () => {
                 <div className='nav-main-div'>
                     <input type="text" className='nav-top-input' placeholder='Search for Products' />
                     <span className='cart-div' >
-                        <div className="cart-count" onClick={() => setCartView(true)}>
+                        <div className="cart-count" onClick={handleCartTrue}>
                             {arry.length}
                         </div>
-                        <FaCartShopping className='cart-icon me-2' onClick={() => setCartView(true)} />
-                        <span className='cart-text' style={{ fontSize: "18px", fontWeight: "600" }} onClick={() => setCartView(true)}>Cart</span>
+                        <FaCartShopping className='cart-icon me-2' onClick={() => dispatch(CartOn())} />
+                        <span className='cart-text' style={{ fontSize: "18px", fontWeight: "600" }} onClick={() => dispatch(CartOn())}>Cart</span>
                     </span>
                     <FaUserCircle className='cart' onClick={() => setClose(true)} />
                     <TiThMenuOutline className='nav-mainu' />

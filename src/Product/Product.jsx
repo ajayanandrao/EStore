@@ -14,6 +14,7 @@ import { AddProduct, updateTodo } from '../Redux/Product';
 import Footer from '../Footer';
 import { FaSquarePlus } from "react-icons/fa6";
 import { FaSquareMinus } from "react-icons/fa6";
+import { CartOff, CartOn } from '../Redux/CartView';
 
 const Product = () => {
     const { id } = useParams();
@@ -54,7 +55,9 @@ const Product = () => {
             dispatch(updateTodo({ id, number }))
         }
     }
-
+    useEffect(() => {
+        dispatch(CartOff());
+    }, [])
     const Arrya = [...category, ...mobile, ...newApi];
 
     const categoryMatch = Arrya.find((item) => item.id == id);
@@ -67,8 +70,9 @@ const Product = () => {
         if (id && name && image && price) {
             dispatch(AddProduct(id, name, image, price, count));
         }
-        return
+        return;
     }
+    
     function myFunction() {
         // Get the snackbar DIV
         var x = document.getElementById("snackbar");
@@ -82,7 +86,7 @@ const Product = () => {
 
     return (
         <>
-            <div className='product-main'>
+            <div className='product-main' onClick={() => dispatch(CartOff())}>
                 {pay &&
                     <div className="payment-div">
                         <div className="payment-div-card">
@@ -145,6 +149,7 @@ const Product = () => {
                                 <FaCartShopping style={{ fontSize: "18px" }} className='me-2' />
                                 ADD TO CART
                             </div>
+
 
                             <div className='d-flex add-btn-sec align-items-center'>
                                 <div className='mx-4'>

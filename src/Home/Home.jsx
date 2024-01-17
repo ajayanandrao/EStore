@@ -15,6 +15,8 @@ import micro from "./../assets/plane.png";
 import tv from "./../assets/tv.png";
 import microsoft from "./../assets/microsoft.png";
 import Footer from '../Footer';
+import { useDispatch } from 'react-redux';
+import { CartOff } from '../Redux/CartView';
 
 
 const Home = () => {
@@ -130,10 +132,14 @@ const Home = () => {
             )
         )
     });
-    const [childData, setChildData] = useState(null);
-    const handleChildData = (data) => {
-        setChildData(data);
-    };
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(CartOff());
+    }, [])
+
+
     return (
         <>
             <div className='main-div '>
