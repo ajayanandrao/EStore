@@ -142,7 +142,7 @@ const Home = () => {
 
     return (
         <>
-            <div className='main-div '>
+            <div className='main-div' onClick={() => dispatch(CartOff())}>
 
                 <OneCell propsData={TopCarsole} />
                 <div className="groupCell-wrapper">
